@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-paper: #F7F4ED;
+    --text-ink: #252820;
+    --chartreuse: #D5F36A;
+  }
+
+  body {
+    background-color: #F7F4ED;
+    color: #252820;
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-editorial {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .font-mono-meta {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+}
+
+/* Editorial divider lines */
+.border-atelier {
+  border-color: rgba(37, 40, 32, 0.12);
+}
+
+.border-atelier-dark {
+  border-color: #252820;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(37, 40, 32, 0.15);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(37, 40, 32, 0.3);
+}
+
+/* Paper textured styling */
+.paper-sheet {
+  background: #FFFFFF;
+  border: 1px solid rgba(37, 40, 32, 0.1);
+  box-shadow: 0 4px 20px -2px rgba(37, 40, 32, 0.04), 0 1px 2px rgba(37, 40, 32, 0.02);
+}
+
+/* Interactive touch target standards */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Print Stylesheet for Proposals & Invoices */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .paper-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+}
